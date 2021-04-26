@@ -452,3 +452,25 @@ span#navbg{
 .formdiv{
     width:50%
 }
+
+.underconstruction{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+}
+.underconstruction h1{
+    font-weight: lighter;
+    color: var(--text-blue);
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+}
+.ucSvg{
+    opacity: 0.1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
