@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"> 
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">         -->
+    <link rel="icon" href="./assets/Images/logo.png">
+    <title>BlurryRender</title>
+</head>
+<body>
+      
+    
+    <div id="container"></div>
+        
+    <div id="swup" class="home-div " >
+        <div class="blurryrender">BLURRYRENDER</div>
+        <div class="title">ENGINEER | WEB DEVELOPER | 3D ARTIST | VIDEO EDITOR</div>
+
+        <div class="navbar">
+            <a href="#" class="toggle-button">
+                <span class="bar bar1"></span>
+                <span class="bar bar2"></span>
+                <span class="bar bar3"></span>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="./html/work.html" class="link1">_Work</a></li>
+                    <li><a href="./html/about.html" class="link2">_About</a></li>
+                    <li><a href="./html/contact.html" class="link3">_Contact</a></li>
+                </ul>
+            </div>
+        </div>
+            
+    </div>
+    <div class="bb1"></div> 
+    <div class="bb2"></div> 
+    
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- SWUP  -->
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+    <!-- INDEX BG ANIMATION -->
+    <script type="module" src="./js/3dAnim.js"></script>
+    <!--GSAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineLite.min.js" integrity="sha512-I0VFyPo7hdM7YrEbQ0pvX4bX2904k0+B19u/xBrPrQoMprfcSnIDfGFD8kP52GbAhwtDjkEVhXlQvj8+vkJyew==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin="anonymous"></script>
+    <script>
+    const blackBar = document.querySelector(".bb1")
+        const blueBar = document.querySelector(".bb2")
+        
+        let tl = new TimelineMax()
+        
+        tl.fromTo(blueBar,1,{width:'0%'},{width:"100%"},)
+        .fromTo(blackBar,1,{height:'100%'},{height:"0%"})
+        .fromTo(blueBar,1,{width:'100%'},{width:"0%"},"-=1");
+    </script>
+    <script type="module" src="./js/transition.js""></script>
+</body>
+</html>
