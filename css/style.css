@@ -346,13 +346,12 @@ span#navbg{
 .about-title{
     width: 45%;
     height: 40%;    
-    font-size: 10vw;
     padding-top: 20vh;
     color: rgb(143, 143, 143);
 }
 
 .about-title .aboutbig{
-    font-size: 10vw;
+    font-size: 8vw;
     font-weight: lighter;
     text-decoration: line-through;
     text-decoration-color: var(--text-blue);
@@ -360,7 +359,7 @@ span#navbg{
 .about-title .aboutsmall{
     line-height: 2vw;
     font-weight: lighter;
-    font-size: 1vw;
+    font-size: 1.2rem;
 }
 #about3d {
     height: 100%;
@@ -473,4 +472,288 @@ span#navbg{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+}
+.toggle-button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 35px;
+}
+
+.toggle-button .bar {
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.toggle-button .bar1{
+    background-color: white;
+}
+.toggle-button .bar2{
+    background-color: var(--text-blue);
+}
+.toggle-button .bar3{
+    background-color: aqua;
+}
+
+
+/* SCREEN 800px */
+@media only screen and (max-width:800px){
+    .navbar{
+        width: 100vw;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 5%;
+    }
+    .navbar ul li{
+        margin: 0 4vw;
+    }
+    .navbar ul{
+        width: 100%
+    }
+    .navbar ul a{
+        font-size: 0.8rem;
+    }
+    .title{
+        font-size: 0.65rem;
+    }
+    .work-div{
+        flex-direction: column;
+    }
+    .worknavbar{
+        width: 100vw;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 5%;
+    }
+    .worknavbar ul li{
+        margin: 0 4vw;
+    }
+    .worknavbar ul{
+        width: 100%
+    }
+    .worknavbar ul a{
+        font-size: 0.8rem;
+    }
+    .column:nth-child(2){
+        margin-top: 0;
+    }
+    .column{
+        margin-top: 5vh;
+        width: 80%;
+    }
+    .card{
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        height: 45vw;
+        display: inline;
+        margin-bottom: 20%;
+        transform-style:preserve-3d;
+        transform: perspective(1000px);
+    }
+    .card img{
+        opacity: 1;
+    }
+    .aboutdiv{
+        width: 95%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    #about3d {
+        width: 90%;
+    }
+    #about3d canvas{
+        position: relative;
+    }
+    .about-title{
+        width: 100%;
+        position: relative;
+        margin-top: 5vh;
+        padding: 0 5rem;
+    }
+    .about-title .aboutbig{
+        font-size: 8vw;
+        font-weight: lighter;
+        text-decoration: line-through;
+        text-decoration-color: var(--text-blue);
+    }
+    .about-title .aboutsmall{
+        line-height: 4vw;
+        font-weight: lighter;
+        font-size: 1.2rem;
+    }
+    .contactdiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .contacttitle{
+        font-size: 4rem;
+        width: 100%;
+        text-align: center;
+        text-decoration: line-through;
+        text-decoration-color: #8AFFFD;
+    }
+    .sociallinks{
+        width: 100%;
+        margin: 2rem 0;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 2rem;
+    }
+    
+}
+
+
+@media only screen and (max-width:400px){
+    .toggle-button {
+        display: flex;
+    }
+
+    span#navbg{
+        background: linear-gradient(rgba(0,0,0,0) , rgba(0,0,0,0));
+        
+    }
+    .navbar ul {
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        width: 100%;
+    }
+
+    .navbar{
+        z-index: 50;
+        height: 100%;
+        top: 0%;
+    }
+    .navbar ul li{
+        width: 100vw;
+        margin: 0 4vw;
+    }
+    .navbar ul{
+        justify-content: center;
+        align-content: space-evenly;
+        flex-direction: column;
+        width: 100%;
+        transition: all 1s ease;
+        display: none;
+    }
+
+    .navbar ul a{
+        padding: 2rem;
+        font-size: 1rem;
+    }
+    .navbar ul.active {
+        transition: all 1s ease;
+        display: flex;
+    }
+
+ 
+
+    .work-div{
+        z-index: -500;
+    }
+    
+    .blurryrender{
+        font-size: 1.7rem;
+    }
+    .title{
+        font-size: 0.5rem;
+    }
+    .work-div{
+        flex-direction: column;
+    }
+    .column:nth-child(2){
+        margin-top: 0;
+    }
+    .column{
+        margin-top: 5vh;
+        width: 80%;
+    }
+    .card{
+        cursor: pointer;
+        position: relative;
+        width: 100%;
+        height: 45vw;
+        display: inline;
+        margin-bottom: 20%;
+        transform-style:preserve-3d;
+        transform: perspective(1000px);
+    }
+    .card img{
+        opacity: 1;
+    }
+    .aboutdiv{
+        width: 95%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    #about3d {
+        width: 90%;
+    }
+    #about3d canvas{
+        position: relative;
+    }
+    .about-title{
+        width: 100%;
+        position: relative;
+        margin-top: 5vh;
+        padding: 0 5rem;
+    }
+    .about-title .aboutbig{
+        font-size: 8vw;
+        font-weight: lighter;
+        text-decoration: line-through;
+        text-decoration-color: var(--text-blue);
+    }
+    .about-title .aboutsmall{
+        line-height: 4vw;
+        font-weight: lighter;
+        font-size: 1.2rem;
+    }
+    .contactdiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .contacttitle{
+        font-size: 4rem;
+        width: 100%;
+        text-align: center;
+        text-decoration: line-through;
+        text-decoration-color: #8AFFFD;
+    }
+    .sociallinks{
+        width: 100%;
+        margin: 2rem 0;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        font-size: 2rem;
+    }
+    
 }
