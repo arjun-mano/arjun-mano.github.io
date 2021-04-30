@@ -653,7 +653,8 @@ span#navbg{
         flex-direction: column;
         width: 100%;
         transition: all 1s ease;
-        display: none;
+        Left: 250%;
+        
     }
 
     .navbar ul a{
@@ -662,6 +663,7 @@ span#navbg{
     }
     .navbar ul.active {
         transition: all 1s ease;
+        Left:0;
         display: flex;
     }
 
