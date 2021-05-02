@@ -663,7 +663,7 @@ span#navbg{
     }
     .navbar ul.active {
         transition: all 1s ease;
-        Left:0;
+
         display: flex;
     }
 
