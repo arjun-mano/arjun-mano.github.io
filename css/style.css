@@ -653,7 +653,7 @@ span#navbg{
         flex-direction: column;
         width: 100%;
         transition: all 1s ease;
-        Left: 250%;
+        display: none;
         
     }
 
