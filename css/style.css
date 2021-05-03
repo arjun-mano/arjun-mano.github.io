@@ -654,6 +654,7 @@ span#navbg{
         width: 100%;
         transition: all 1s ease;
         display: none;
+        
     }
 
     .navbar ul a{
@@ -662,6 +663,7 @@ span#navbg{
     }
     .navbar ul.active {
         transition: all 1s ease;
+
         display: flex;
     }
 
