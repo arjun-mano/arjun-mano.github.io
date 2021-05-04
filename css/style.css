@@ -629,6 +629,7 @@ span#navbg{
     .toggle-button {
         display: flex;
         z-index: 120;
+        position: fixed;
     }
 
     span#navbg{
@@ -677,10 +678,11 @@ span#navbg{
     }
     
     .blurryrender{
-        font-size: 1.7rem;
+        font-size: 2rem;
+        font-weight: lighter;
     }
     .title{
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
     .work-div{
         flex-direction: column;
