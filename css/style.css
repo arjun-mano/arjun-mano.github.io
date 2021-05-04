@@ -285,7 +285,9 @@ span#navbg{
     background: linear-gradient(rgba(0,0,0,0) ,black);
     
 }
-
+.swipe{
+    display: none;
+}
 .worksample{
     z-index: 2;
     margin-top: 100vh;
@@ -463,6 +465,7 @@ span#navbg{
 .underconstruction h1{
     font-weight: lighter;
     color: var(--text-blue);
+    text-align: center;
     font-size: 3rem;
     letter-spacing: 0.2rem;
 }
@@ -481,7 +484,7 @@ span#navbg{
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
-    height: 35px;
+    height:30px;
 }
 
 .toggle-button .bar {
@@ -564,7 +567,7 @@ span#navbg{
         opacity: 1;
     }
     .aboutdiv{
-        width: 95%;
+        width: 100%;
         justify-content: center;
         align-items: center;
         flex-direction: column-reverse;
@@ -625,6 +628,7 @@ span#navbg{
 @media (max-aspect-ratio: 3/4) {
     .toggle-button {
         display: flex;
+        z-index: 120;
     }
 
     span#navbg{
@@ -642,6 +646,8 @@ span#navbg{
         z-index: 50;
         height: 100%;
         top: 0%;
+        margin-top: -150vh;
+        transition: all 1s ease;
     }
     .navbar ul li{
         width: 100vw;
@@ -652,19 +658,16 @@ span#navbg{
         align-content: space-evenly;
         flex-direction: column;
         width: 100%;
-        transition: all 1s ease;
-        display: none;
-        
     }
 
     .navbar ul a{
         padding: 2rem;
         font-size: 1rem;
     }
-    .navbar ul.active {
+    .navbar.active {
         transition: all 1s ease;
-
-        display: flex;
+        margin-top: 0;
+        /* display: flex; */
     }
 
  
@@ -703,10 +706,59 @@ span#navbg{
         opacity: 1;
     }
     .aboutdiv{
-        width: 95%;
+        width: 100%;
         justify-content: center;
         align-items: center;
         flex-direction: column-reverse;
+    }
+    .swipe{
+        display: inline;
+        position: absolute;
+        letter-spacing: 0.3rem;
+        font-weight: lighter;
+        font-size: 0.8rem;
+        color: white;
+        bottom: 5%;
+        width: 95%;
+        text-align: right;
+    }
+    .sampleTitle h1{
+        font-size: 5vw;
+        font-weight: normal;
+    }
+    .sampleTitle h4{
+        font-size: 3vw;
+        font-weight: lighter;
+    }
+    .sampleTitle h5{
+        padding-left: 0;
+        font-size: 2vw;
+        font-weight: lighter;
+    }
+    .sampleTitle a{
+        color: var(--text-blue);
+        text-decoration: none;
+    }
+    .sampleTitle a:visited{
+        color: var(--text-blue);
+        text-decoration: none;
+    }
+    .sampleimglist{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sampleimg{
+        width: 90vw;
+        padding: 3vw;    
+    }
+    .sampleimg img{
+        width: 100%;
+        object-fit: cover;
+
     }
     #about3d {
         width: 90%;
@@ -718,7 +770,7 @@ span#navbg{
         width: 100%;
         position: relative;
         margin-top: 5vh;
-        padding: 0 5rem;
+        padding: 0 3rem;
     }
     .about-title .aboutbig{
         font-size: 8vw;
@@ -727,9 +779,9 @@ span#navbg{
         text-decoration-color: var(--text-blue);
     }
     .about-title .aboutsmall{
-        line-height: 4vw;
+        line-height: 1.5rem;
         font-weight: lighter;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .contactdiv{
         display: flex;
